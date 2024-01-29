@@ -10,6 +10,7 @@ describe('HelloWorld', () => {
   })
 
   it('contains app name', () => {
+    import.meta.env.VITE_APP_NAME = 'My App Name';
     const wrapper = mount(HelloWorld, { props: { msg: 'Hello Vitest' } })
     expect(wrapper.text()).toContain(import.meta.env.VITE_APP_NAME)
   })
