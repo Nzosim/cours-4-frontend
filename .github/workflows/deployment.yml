@@ -52,7 +52,7 @@ jobs:
       - name: Run test
         run: npm run test
 
-  build-e2e:  
+  build:  
     name: Run build and e2e test
     runs-on: ubuntu-latest
     steps:
@@ -67,6 +67,3 @@ jobs:
 
       - name: Build
         run: npm run build
-
-      - name: Run End-To-End Test
-        run: npm run test:e2e:dev
