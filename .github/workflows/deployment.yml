@@ -17,7 +17,7 @@ permissions:
   id-token: write
 
 jobs:
-  linter-formatter:
+  test-deployment:
     name: Run linter and formatteur
     runs-on: ubuntu-latest
     steps:
@@ -35,3 +35,12 @@ jobs:
 
       - name: Run format
         run: npm run format
+
+      - name: Run test
+        run: npm run test
+
+      - name: Build
+        run: npm run build
+
+      - name: Run End-To-End Test
+        run: npm run test:e2e:dev
