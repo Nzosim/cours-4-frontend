@@ -34,8 +34,6 @@ describe('Counter', () => {
       expect(counterStore.increment).toHaveBeenCalledTimes(1)
     })
     it('decrements counter', async () => {
-      const wrapper = mountCounter(50)
-      const counterStore = useCounterStore()
     })
   })
 })
