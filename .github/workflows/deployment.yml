@@ -22,20 +22,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Print directory structure
-        run: ls -R
+        uses: actions/checkout@v4
         
       - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+        uses: actions/setup-node@v4
 
       - name: Install dependencies
         run: npm ci
 
       - name: Run linter 
-        run: npm run lint && npm run format
-        working-directory: ./cours-4-frontend
-
+        run: npm run lint 
