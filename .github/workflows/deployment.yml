@@ -17,7 +17,7 @@ permissions:
   id-token: write
 
 jobs:
-  linter-formatter:
+  test-deployment:
     name: Run linter and formatteur
     runs-on: ubuntu-latest
     steps:
